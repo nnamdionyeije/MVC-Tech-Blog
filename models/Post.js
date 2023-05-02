@@ -12,6 +12,14 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        content: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: true,
@@ -19,15 +27,6 @@ Post.init(
                 model: 'user',
                 key: 'id',
             }
-        },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-
-        },
-        content: {
-            type: DataTypes.STRING,
-            allowNull: false,
         }
     },
     {
