@@ -36,7 +36,7 @@ const delButtonHandler = async (event) => {
 };
 
 const updateButtonHandler = async (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   if (!event.target.hasAttribute('data-id')) {
     // document.location.replace('/post')
     console.log("test");

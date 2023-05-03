@@ -8,7 +8,7 @@
     {{posts.content}}
   </p>
   
-  <p>Created by {{posts.user.name}}</p>
+  <p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p>
 </div>
 
 
@@ -28,7 +28,7 @@
 
 {{#each posts.comments as |comment|}}
   <div>
-    <p>{{comment.text}} - {{comment.user.name}}</p>
+    <p>{{comment.text}} - Posted by: {{comment.user.name}} on {{format_date comment.date_created}}</p>
   </div>
 {{/each}}
 
