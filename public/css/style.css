@@ -27,3 +27,18 @@ header, .project:not(:last-child) {
   background-color: rgb(67, 42, 42);
   width: 100%;
 }
+
+.individual-comment {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+
+}
+
+.infotext {
+  font-weight: bold;
+}
+
+.comment-box {
+  max-width: 60%;
+}
+
