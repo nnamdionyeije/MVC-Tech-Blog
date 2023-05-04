@@ -37,11 +37,13 @@ const delButtonHandler = async (event) => {
 
 const updateButtonHandler = async (event) => {
   // event.preventDefault();
-  if (!event.target.hasAttribute('data-id')) {
-    // document.location.replace('/post')
-    console.log("test");
-  }
+  if (event.target.hasAttribute('data1-id')) {
 
+    const id = event.target.getAttribute('data1-id');
+    // document.location.replace('/post')
+    document.location.replace(`/updatedpost/${id}`)
+  }
+  
   
 }
   

@@ -90,5 +90,31 @@ router.get('/login', (req, res) => {
     res.render("login");
 });
 
+router.get('/updatedpost/:id', async (req, res) => {
+    try {
+        const updateData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: {
+                        exclude: ["password"],
+                    }
+                },
+            ],
+        });
+
+        const updatedPost = updateData.get({ plain: true });
+
+        res.render("updatedpost", {
+            updatedPost,
+            logged_in: req.session.logged_in,
+        });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+    
+});
+
 module.exports = router;
 
