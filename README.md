@@ -20,7 +20,7 @@ This application is a blog website created following the Model-View-Controller p
 
 - [Questions](#questions)
 
-- [Link](link)
+- [Link](#link)
 
 ## Screenshots
 
